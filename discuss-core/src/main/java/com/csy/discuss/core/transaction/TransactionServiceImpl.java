@@ -40,4 +40,11 @@ public class TransactionServiceImpl implements TransactionService {
 
     }
 
+    @Override
+    public void insert() {
+        Order record = new Order();
+        record.setUserId(1L);
+        orderMapper.insertSelective(record);
+    }
+
 }

@@ -8,4 +8,6 @@ public interface TransactionService {
 
     void insertThrowException();
 
+    void insert();
+
 }

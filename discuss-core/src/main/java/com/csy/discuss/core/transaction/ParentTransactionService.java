@@ -4,6 +4,8 @@ public interface ParentTransactionService {
 
     void a();
 
+    void b();
+
     void insertWithTransactionalBeforeChild(Integer childType);
 
     void insertBeforeChild(Integer childType);

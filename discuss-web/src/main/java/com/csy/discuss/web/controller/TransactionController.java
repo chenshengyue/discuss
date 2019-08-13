@@ -23,6 +23,14 @@ public class TransactionController {
         return Result.success();
     }
 
+    @GetMapping("/b")
+    public Result<Boolean> b() {
+
+        parentTransactionService.b();
+
+        return Result.success();
+    }
+
     @GetMapping("/insertWithTransactionalBeforeChild")
     public Result<Boolean> insertWithTransactionalBeforeChild(@RequestParam(value = "type") Integer type) {
 

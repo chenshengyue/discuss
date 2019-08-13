@@ -21,12 +21,13 @@ public class ParentTransactionServiceImpl implements ParentTransactionService {
         this.b();
     }
 
+    @Override
     @Transactional
     public void b() {
         Order record = new Order();
         record.setUserId(1L);
         orderMapper.insertSelective(record);
-        throw new BizException("111");
+//        throw new BizException("111");
     }
 
     @Transactional
@@ -93,6 +94,11 @@ public class ParentTransactionServiceImpl implements ParentTransactionService {
         if (3 == childType) {
             transactionService.insertThrowException();
         }
+
+        if (4 == childType) {
+            transactionService.insert();
+        }
+
     }
 
 }
