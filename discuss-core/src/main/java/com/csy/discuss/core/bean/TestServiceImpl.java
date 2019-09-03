@@ -13,18 +13,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class TestServiceImpl implements TestService, ApplicationContextAware, ApplicationListener<ContextRefreshedEvent> {
 
-    @Autowired
-    private UserService userService1;
+//    @Autowired
+//    private UserService userService1;
 
     @Value("${test.a}")
     private String a;
 
-    public UserService getUserService1() {
-        return userService1;
-    }
-
     public void setUserService1(UserService userService1) {
-        this.userService1 = userService1;
+
     }
 
     public String getA() {
@@ -37,7 +33,7 @@ public class TestServiceImpl implements TestService, ApplicationContextAware, Ap
 
     @Override
     public void test() {
-        userService1.a();
+
         System.out.println(a);
     }
 
