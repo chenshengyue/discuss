@@ -9,9 +9,6 @@ import javax.annotation.Resource;
 @Service
 public class UniqueServiceImpl implements UniqueService {
 
-    @Resource(type = com.csy.discuss.core.autowire.UserService1Impl.class)
-    private UserService userService1;
-
     @Resource
     private UserService userService1Impl;
 
@@ -23,7 +20,6 @@ public class UniqueServiceImpl implements UniqueService {
 
     @Override
     public void a() {
-        userService1.a();
         userService2Impl.a();
     }
 }

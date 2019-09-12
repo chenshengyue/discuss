@@ -1,7 +1,5 @@
 package com.csy.discuss.core.bean;
 
-import com.csy.discuss.core.service.OrderService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service("userService1")
